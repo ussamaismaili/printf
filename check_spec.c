@@ -1,4 +1,4 @@
-#include "myh.h"
+#include "main.h"
 /**
  * check_spec - checks that the the specifier passed is a valid one,
  * and the run the specific function.

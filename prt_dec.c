@@ -1,4 +1,4 @@
-#include "myh.h"
+#include "main.h"
 /**
  * prt_dec - a function that prints the fiven in from the
  * variadic parameters to base 10 .

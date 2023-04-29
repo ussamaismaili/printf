@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "myh.h"
+#include "main.h"
 /**
  * _printf - prints a string in a formatted way
  * @frmt: string to print (char *)

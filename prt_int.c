@@ -1,4 +1,4 @@
-#include "myh.h"
+#include "main.h"
 /**
  * prt_int - A function that  prints the
  * given integer from the variadic parameters.

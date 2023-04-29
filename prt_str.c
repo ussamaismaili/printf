@@ -1,4 +1,4 @@
-#include "myh.h"
+#include "main.h"
 /**
  * prt_str - a function that prints a variadic string .
  * @args: the variadic parameter.

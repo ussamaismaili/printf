@@ -1,4 +1,4 @@
-#include "myh.h"
+#include "main.h"
 /**
  * prt_cent - it prints the character % .
  * @args: the variadic parameter.

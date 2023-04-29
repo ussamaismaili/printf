@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
-#include "myh.h"
+#include "main.h"
 /**
  * main - test file
  * Return: always 0
