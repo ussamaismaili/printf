@@ -3,33 +3,32 @@
 #include <unistd.h>
 #include "myh.h"
 /**
- * _printf - a function that prints strings in a formated manners
- * @frmt :
+ * _printf - prints a string in a formatted way
+ * @frmt: string to print (char *)
+ * @...: variadic parameters (unknown)
+ * Return: number of characters printed
  */
-int _printf(const char *frmt ,...)
+int _printf(const char *frmt, ...)
 {
-	int i = 0;
-	int cnt = 0;
-	int value =0;
+	int i = 0, value = 0, cnt = 0, (*f)(va_list);
 	va_list args;
-	va_start(args, frmt);
-	int (*f)(va_list);
 
+	va_start(args, frmt);
 	if (frmt == NULL)
-		return (-1):
+		return (-1);
 	while (frmt[i])
-	{	
-		if (frmt != '%')
+	{
+		if (frmt[i] != '%')
 		{
 			value = write(1, &frmt[i], 1);
 			cnt += value;
 			i++;
 			continue;
 		}
-		else if (frmt == '%')
+
+		if (frmt[i] == '%')
 		{
-			i++;
-			f = check_spec(frmt[i]);
+			f = check_spec(&frmt[i + 1]);
 			if (f != NULL)
 			{
 				value = f(args);
@@ -37,15 +36,15 @@ int _printf(const char *frmt ,...)
 				i = i + 2;
 				continue;
 			}
-			else if (frmt[i + 1] == "\0")
-			{ 
+
+			if (frmt[i + 1] == '\0')
 				break;
-			}
-			else if (frmt[i + 1] != "\0")
+
+			if (frmt[i + 1] != '\0')
 			{
 				value = write(1, &frmt[i], 1);
 				cnt += value;
-				i+= 2;
+				i += 2;
 				continue;
 			}
 		}
