@@ -10,7 +10,7 @@ int (*check_spec(const char *frmt))(va_list)
 	fun_p array[] = {
 		{"c", prt_char},
 		{"s", prt_str}, {"S", prt_spec},
-		{"%", prt_cent},
+		{"%", prt_cent}, {"p", prt_ptr},
 		{"i", prt_int},
 		{"d", prt_int},
 		{"o", prt_oct},
