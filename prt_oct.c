@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * prt_oct -func that prints an octal number.
- * @val: arguments.
+ * prt_oct - func that prints an octal number.
+ * @args: arguments.
  * Return: cnt.
  */
 int prt_oct(va_list args)

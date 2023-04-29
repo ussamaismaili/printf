@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * prt_unsigned - prints an uns integer
+ * prt_uns - prints an uns integer
  * @args: the argument to print
  * Return: the number of characters printed
  */
