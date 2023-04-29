@@ -11,7 +11,8 @@ int _putchar(char c);
 int _putstr(char *str);
 int (*check_spec(const char *))(va_list);
 int prt_oct(va_list args);
-int prt_rot13(va_list args);
+int prt_rot(va_list args);
+int prt_hex(va_list args);
 /**
  * struct fun - the struct for the specifier to the pointer.
  * @cm: charcter to be compared
