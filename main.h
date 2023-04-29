@@ -14,7 +14,7 @@ int prt_oct(va_list args);
 int prt_rot(va_list args);
 int prt_hex(va_list args);
 int prt_oct(va_list args);
-int prt_bin(va_list args)
+int prt_bin(va_list args);
 /**
  * struct fun - the struct for the specifier to the pointer.
  * @cm: charcter to be compared

@@ -6,7 +6,7 @@
  */
 int prt_bin(va_list args)
 {
-	int flag = 0, int cnt = 0, int i, a = 1, b;
+	int flag = 0, cnt = 0, i, a = 1, b;
 	unsigned int num = va_arg(args, unsigned int);
 	unsigned int p;
 
