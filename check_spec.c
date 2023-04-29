@@ -7,7 +7,7 @@
  */
 int (*check_spec(const char *frmt))(va_list)
 {
-	fun_p array[11] = {
+	fun_p array[12] = {
 		{"c", prt_char},
 		{"s", prt_str},
 		{"%", prt_cent},
@@ -18,6 +18,7 @@ int (*check_spec(const char *frmt))(va_list)
 		{"r", prt_rot},
 		{"x", prt_hex},
 		{"X", prt_hex},
+		{"b", prt_bin},
 		{NULL, NULL}};
 	int i;
 
