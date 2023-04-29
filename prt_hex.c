@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  * prt_hex - prints an hexgecimal number.
  * @args: arguments.
