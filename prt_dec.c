@@ -26,7 +26,7 @@ int prt_dec(va_list args)
 			i++;
 	}
 
-	for (i; i >= 0; i--)
+	for (; i >= 0; i--)
 	{
 		x[0] = ('0' + arr[i]);
 		cnt += write(1, x, 1);
