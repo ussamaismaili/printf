@@ -13,6 +13,9 @@ int (*check_spec(const char *frmt))(va_list)
 		{"%", prt_cent},
 		{"i", prt_int},
 		{"d", prt_dec},
+		{"o", prt_oct},
+		{"r", prt_rot},
+		{"x", prt_hex},
 		{NULL, NULL}};
 	int i;
 
