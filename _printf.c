@@ -1,83 +1,54 @@
-#include "main.h"
-#include<stdarg.h>
-#include<stdlib.h>
+#include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
+#include "myh.h"
 /**
- * print_all - checsfk the type of format given
- *
- * @c: type to be printed
- * @arg: arguments
- * @len: length of it
- *
- * Return: void
+ * _printf - a function that prints strings in a formated manners
+ * @frmt :
  */
-void print_all(char c, va_list arg, int *len)
+int _printf(const char *frmt ,...)
 {
-	if (c == '%')
-		*len += _putchar('%');
-	else if (c == 'c')
-		*len += _putchar(va_arg(arg, int));
-	else if (c == 's')
-		*len += _putstr(va_arg(arg, char *));
-	else if (c == 'd' || c == 'i')
-		print_num(va_arg(arg, int), len);
-	else if (c == 'b')
-		print_bin(va_arg(arg, int), len);
-	else if (c == 'u')
-		print_unsi_num(va_arg(arg, int), len);
-	else if (c == 'o')
-		print_octal_num(va_arg(arg, int), len);
-	else if (c == 'x' || c == 'X')
-		print_hex_num(va_arg(arg, int), c, len);
-	else if (c == 'S')
-		print_string(va_arg(arg, char *), len);
-	else if (c == 'p')
-	{
-		*len += _putstr("0x");
-		print_adress(va_arg(arg, unsigned long), "0123456789abcdef", len);
-	}
-	else if (c == 'r')
-		reve_print(va_arg(arg, char *), len);
-	else if (c == 'R')
-		rot(va_arg(arg, char *), len);
-	else if (c == '+')
-		print_plus(va_arg(arg, int), len);
-	else if (c == ' ')
-		print_space(va_arg(arg, int), len);
-	else if (c == '#')
-		print_prefix(va_arg(arg, int), c, len);
-}
-/**
- * _printf - the main code func
- *
- * @format: type to printed
- *
- * Return: the lenght
- */
-int _printf(const char *format, ...)
-{
-	va_list arg;
-	int i;
-	int len = 0;
+	int i = 0;
+	int cnt = 0;
+	int value =0;
+	va_list args;
+	va_start(args, frmt);
+	int (*f)(va_list);
 
-	if (format == NULL)
-		return (-1);
-	va_start(arg, format);
-	for (i = 0; format[i] != '\0'; i++)
-	{
-		if (format[i] == '%')
+	if (frmt == NULL)
+		return (-1):
+	while (frmt[i])
+	{	
+		if (frmt != '%')
+		{
+			value = write(1, &frmt[i], 1);
+			cnt += value;
+			i++;
+			continue;
+		}
+		else if (frmt == '%')
 		{
 			i++;
-			if (format[i] == '\0')
+			f = check_spec(frmt[i]);
+			if (f != NULL)
 			{
-				va_end(arg);
-				return (-1);
+				value = f(args);
+				cnt += value;
+				i = i + 2;
+				continue;
 			}
-			else if (format[i])
-				print_all(format[i], arg, &len);
+			else if (frmt[i + 1] == "\0")
+			{ 
+				break;
+			}
+			else if (frmt[i + 1] != "\0")
+			{
+				value = write(1, &frmt[i], 1);
+				cnt += value;
+				i+= 2;
+				continue;
+			}
 		}
-		else
-			len += _putchar(format[i]);
 	}
-	va_end(arg);
-	return (len);
+	return (cnt);
 }

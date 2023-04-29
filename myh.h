@@ -4,7 +4,9 @@
 int _printf(const char *frmt, ...);
 int _putchar(char c);
 int _putstr(char *str);
-int (*check_spec(char*))(val_list);
+int (*check_spec(const char*))(va_list);
+int _printf(const char *format, ...);
+int (*check_spec(const char*))(va_list);
 /**
  * struct fun - the struct for the specifier to the pointer.
  * @cm: charcter to be compared
@@ -13,7 +15,7 @@ int (*check_spec(char*))(val_list);
 typedef struct fun
 {
 	char *cm;
-	int (*f)(val_list):
-} fun_p;
+	int (*f)(va_list);
+} fun_t;
 
 #endif

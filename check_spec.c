@@ -7,9 +7,9 @@
  * @frmt: the specifier .
  * Return : If it's not a null it returns a pointer to the function.
  */
-int (*check_spec(char *frmt))(va_list)
+int (*check_spec(const char *frmt))(va_list)
 {
-	fun_t array[4] ={
+	fun_t array[4] = {
 		{"c", _putchar},
 		{"s", _putstr},
 		{"%", _percent},

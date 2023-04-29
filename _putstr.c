@@ -1,5 +1,6 @@
 #include<unistd.h>
 #include "main.h"
+#include "myh.h"
 /**
  * _putstr - function that prints a string
  *
