@@ -7,7 +7,7 @@
 int prt_ptr(va_list args)
 {
 	void *p;
-	char *s = "(null)";
+	char *s = "(nil)";
 	long int a;
 	int b;
 	int i;
