@@ -6,18 +6,21 @@
  */
 int prt_str(va_list args)
 {
-	int i = 0;
+	int i = 0;	
 	int cnt = 0;
 	char *str;
 
 	str = va_arg(args, char *);
 	if (str == NULL)
-		return (-1);
+	{
+		cnt = write(1, "(null)", 6);
+		return (cnt);
+	}
 
 	while (str[i])
 	{
 		cnt = write(1, &str[i], 1);
-		i = i + 1;
+		i += 1;
 	}
 	return (cnt);
 }
