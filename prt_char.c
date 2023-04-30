@@ -16,8 +16,8 @@ int prt_char(va_list args)
 	}
 	else
 	{
-		count = write(1, "\0", 1);
-	        return (count);
+		count = write(1, "\0", 1)
+		return (count);
 	}
 	return (0);
 }
