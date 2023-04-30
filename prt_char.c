@@ -14,5 +14,10 @@ int prt_char(va_list args)
 		count = write(1, &c, 1);
 		return (count);
 	}
+	else
+	{
+		count = write(1, "\0", 1);
+	        return (count);
+	}
 	return (0);
 }
