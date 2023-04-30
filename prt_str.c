@@ -12,16 +12,12 @@ int prt_str(va_list args)
 
 	str = va_arg(args, char *);
 	if (str == NULL)
-	{
-		cnt = write(1, "(null)", 6);
-		return (cnt);
-	}
+		return (-1);
 
 	while (str[i])
 	{
 		cnt = write(1, &str[i], 1);
-		i += 1;
+		i = i + 1;
 	}
-
 	return (cnt);
 }
