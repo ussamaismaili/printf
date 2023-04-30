@@ -19,6 +19,8 @@ int prt_uns(va_list args);
 int prt_spec(va_list args);
 int prt_hex2(unsigned long int num);
 int prt_ptr(va_list args);
+int prt_srev(va_list args);
+int prt_37();
 /**
  * struct fun - the struct for the specifier to the pointer.
  * @cm: charcter to be compared

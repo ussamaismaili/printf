@@ -6,7 +6,7 @@
  */
 int prt_str(va_list args)
 {
-	int i;
+	int i = 0;
 	int cnt = 0;
 	char *str;
 
