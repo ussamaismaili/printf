@@ -13,7 +13,7 @@ int prt_str(va_list args)
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
-        	cnt = write(1, "(null)", 6);
+        	cnt = _putchar("(null)");
 		return (cnt);
 	}
 
