@@ -13,13 +13,13 @@ int prt_str(va_list args)
 	str = va_arg(args, char *);
 	if (str == NULL)
 	{
-        	cnt = _putchar("(null)");
+        	cnt += write(1, "(null)", 6);
 		return (cnt);
 	}
 
 	while (str[i] != '\0')
 	{
-		cnt = write(1, &str[i], 1);
+		cnt += write(1, &str[i], 1);
 		i = i + 1;
  	}
 	return (cnt);
