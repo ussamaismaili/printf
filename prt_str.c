@@ -17,7 +17,7 @@ int prt_str(va_list args)
 		return (cnt);
 	}
 
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		cnt = write(1, &str[i], 1);
 		i = i + 1;
