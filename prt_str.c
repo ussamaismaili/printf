@@ -5,7 +5,7 @@
  * Return: the  number of characters printed on Success or -1 on failure .
  */
 int prt_str(va_list args)
-{	
+{
 	int i = 0;
 	int cnt = 0;
 	char *str;
