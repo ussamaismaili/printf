@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * prt_hex2 - prints an hexgecimal number too.
+ * @num: the arguments.
+ * Return: the nu,be counter.
+ */
 int prt_hex2(unsigned long int num)
 {
     int cnt = 0;
