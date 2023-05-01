@@ -11,7 +11,7 @@ int (*check_spec(const char *frmt))(va_list)
 		{"c", prt_char},
 		{"s", prt_str}, {"S", prt_spec},
 		{"%", prt_cent}, {"p", prt_ptr},
-		{"i", prt_int}, {"%r", prt_srev},
+		{"i", prt_int}, {"%r", prt_srevv},
 		{"d", prt_dec}, {"%%", prt_37},
 		{"o", prt_oct},
 		{"R", prt_rot},

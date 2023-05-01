@@ -8,7 +8,7 @@ int prt_srev(va_list args)
 {
 
         char *s = va_arg(args, char*);
-        int i;  //ggf
+        int i;
         int j = 0;
 
         if (s == NULL)
