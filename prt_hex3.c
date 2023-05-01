@@ -4,7 +4,7 @@
  * @num: the arguments.
  * Return: the nu,be counter.
  */
-int prt_hex2(unsigned long int num)
+int prt_hex3(unsigned long int num)
 {
 	long int i;
 	long int *arr;
