@@ -10,6 +10,12 @@ int prt_hex2(unsigned long int num)
 	long int *arr;
 	long int cnt = 0;
 	unsigned long int temp = num;
+	if (num == '\n')
+	{
+		_putchar('0');
+		_putchar('A');
+		return 2;
+	}
 
 	while (num / 16 != 0)
 	{
