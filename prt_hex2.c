@@ -10,12 +10,6 @@ int prt_hex2(unsigned long int num)
 	long int *arr;
 	long int cnt = 0;
 	unsigned long int temp = num;
-	if (num == '\n')
-	{
-		_putchar('0');
-		_putchar('A');
-		return 2;
-	}
 
 	while (num / 16 != 0)
 	{
@@ -33,7 +27,7 @@ int prt_hex2(unsigned long int num)
 	for (i = cnt - 1; i >= 0; i--)
 	{
 		if (arr[i] > 9)
-			arr[i] = arr[i] + 39;
+			arr[i] = arr[i] + 55;
 		_putchar(arr[i] + '0');
 	}
 	free(arr);
