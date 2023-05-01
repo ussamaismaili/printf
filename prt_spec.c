@@ -16,7 +16,7 @@ int prt_spec(va_list args)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] < 32 || s[i] >= 127)
+		if (s[i] < 32 || s[i] >= 127 || s[i] == '\n')
 		{
 			_putchar('\\');
 			_putchar('x');
