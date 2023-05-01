@@ -1,3 +1,4 @@
+#include "main.h"
 int prt_hex2(unsigned long int num)
 {
     int cnt = 0;
